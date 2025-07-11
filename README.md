@@ -54,17 +54,17 @@ Watch the full walkthrough of the project functionality in this demo video:
 ## 📸 Screenshots
 
 ### 🧾 Account Creation
-### 🧾 Account Creation
 ![Account Creation](https://drive.google.com/uc?export=view&id=1vdqDWgTKzRmCsTnuOvfRNVGRpQmS7IFY)
 
 ### 💰 Deposit
-![Deposit](https://drive.google.com/file/d/16qRbm5MpfoPlOwiGKeQtGjeyx2hXytJQ/view?usp=drive_link)
+![Deposit](https://drive.google.com/uc?export=view&id=16qRbm5MpfoPlOwiGKeQtGjeyx2hXytJQ)
 
 ### 💸 Withdraw
-![Withdraw](https://drive.google.com/file/d/1kdHD7lhDQPfgnbzCVy50NAeZwkCYh75e/view?usp=drive_link)
+![Withdraw](https://drive.google.com/uc?export=view&id=1kdHD7lhDQPfgnbzCVy50NAeZwkCYh75e)
 
-### 🔁 Transaction
-![Transaction](https://drive.google.com/file/d/1dgjE9gV2mkjWBQHzVWxtF1fRoGY1UM4K/view?usp=drive_link)
+### 🔁 Transaction 
+![Transaction](https://drive.google.com/uc?export=view&id=1dgjE9gV2mkjWBQHzVWxtF1fRoGY1UM4K)
+
 
 ---
 
