@@ -54,7 +54,8 @@ Watch the full walkthrough of the project functionality in this demo video:
 ## 📸 Screenshots
 
 ### 🧾 Account Creation
-![Account Creation](https://drive.google.com/file/d/1vdqDWgTKzRmCsTnuOvfRNVGRpQmS7IFY/view?usp=drive_link)
+### 🧾 Account Creation
+![Account Creation](https://drive.google.com/uc?export=view&id=1vdqDWgTKzRmCsTnuOvfRNVGRpQmS7IFY)
 
 ### 💰 Deposit
 ![Deposit](https://drive.google.com/file/d/16qRbm5MpfoPlOwiGKeQtGjeyx2hXytJQ/view?usp=drive_link)
