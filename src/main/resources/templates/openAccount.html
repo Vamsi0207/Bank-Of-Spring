@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open Account</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #e0f7fa, #80deea);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    form {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: 300px;
+    }
+
+    label {
+      font-weight: 600;
+      color: #004d40;
+    }
+
+    input, select {
+      padding: 10px;
+      border: 1px solid #b2dfdb;
+      border-radius: 6px;
+      font-size: 1rem;
+      color: #004d40;
+    }
+
+    input:focus, select:focus {
+      outline: none;
+      border-color: #004d40;
+      box-shadow: 0 0 4px rgba(0,77,64,0.5);
+    }
+
+    button {
+      padding: 10px;
+      background: #004d40;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #00695c;
+    }
+
+    .error-message {
+      background: #ffebee;
+      color: #c62828;
+      padding: 10px;
+      border: 1px solid #c62828;
+      border-radius: 6px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <form th:action="@{/saveAccount}" method="post" autocomplete="off">
+    
+    <!-- ERROR MESSAGE BLOCK -->
+    <div class="error-message" th:if="${errorMsg}" th:text="${errorMsg}"></div>
+
+    <label for="username">Name:</label>
+    <input type="text" id="username" name="username" required>
+
+    <label for="govtid">Govt ID:</label>
+    <input type="text" id="govtid" name="govtid" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="mobileNumber">Mobile Number:</label>
+    <input type="text" id="mobileNumber" name="mobileNumber" required>
+
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender" required>
+      <option value="" disabled selected>Select Gender</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+    </select>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>

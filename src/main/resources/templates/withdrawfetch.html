@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Withdraw</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #e1f5fe, #f3e5f5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            position: relative;
+        }
+
+        .form-container {
+            background-color: #ffffff;
+            padding: 40px 35px;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 450px;
+            border: 1px solid #cfd8dc;
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #1976d2;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #444;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #b0bec5;
+            border-radius: 8px;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #1976d2;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #0d47a1;
+        }
+
+        .top-right-home {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .top-right-home a {
+            text-decoration: none;
+            background-color: #ff7043;
+            color: white;
+            padding: 10px 16px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .top-right-home a:hover {
+            background-color: #e64a19;
+        }
+
+        @media (max-width: 480px) {
+            .form-container {
+                padding: 25px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top-Right Home Button -->
+    <div class="top-right-home">
+        <a th:href="@{/accounthome}">Home</a>
+    </div>
+
+    <div class="form-container">
+        <h2>Bank Of Spring - Withdraw</h2>
+
+        <!-- Error Message -->
+        <p th:if="${error}" th:text="${error}" 
+           style="color: red; text-align: center; font-weight: bold; margin-bottom: 15px;"></p>
+
+        <form method="get" th:action="@{/withdraw}">
+            <label for="accountnumber">Enter Account Number:</label>
+            <input type="text" id="accountnumber" name="accountnumber" required>
+            <button type="submit">Fetch Details</button>
+        </form>
+    </div>
+</body>
+</html>

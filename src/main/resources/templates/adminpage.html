@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            position: relative;
+        }
+
+        .logout-form {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .logout-form button {
+            background-color: #ef5350;
+            color: white;
+            padding: 10px 16px;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .logout-form button:hover {
+            background-color: #d32f2f;
+        }
+
+        .container {
+            background-color: white;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h1 {
+            font-size: 26px;
+            color: #1976d2;
+            margin-bottom: 20px;
+        }
+
+        .nav-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        a.nav-link {
+            display: block;
+            padding: 14px;
+            text-decoration: none;
+            background-color: #1976d2;
+            color: white;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            transition: background-color 0.2s ease;
+        }
+
+        a.nav-link:hover {
+            background-color: #1565c0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Top-right logout form -->
+    <form th:action="@{/logout}" method="post" class="logout-form">
+        <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+        <button type="submit">Logout</button>
+    </form>
+
+    <div class="container">
+        <h1>Welcome, Admin</h1>
+        <div class="nav-buttons">
+            <a th:href="@{/depositfetchdetails}" class="nav-link">Deposit</a>
+            <a th:href="@{/withdrawfetchdetails}" class="nav-link">Withdraw</a>
+            <a th:href="@{/adminfetchTransactions}" class="nav-link">View Transactions</a>
+        </div>
+    </div>
+</body>
+</html>

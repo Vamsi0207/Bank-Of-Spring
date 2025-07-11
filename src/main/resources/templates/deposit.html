@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deposit</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-box {
+            background-color: #fff;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 400px;
+            position: relative;
+        }
+
+        .top-home {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+        }
+
+        .top-home a {
+            background-color: #1976d2;
+            color: white;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 14px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .top-home a:hover {
+            background-color: #0d47a1;
+        }
+
+        h2 {
+            text-align: center;
+            color: #1976d2;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 18px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #1976d2;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0d47a1;
+        }
+
+        .success {
+            color: green;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .error {
+            color: red;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-box">
+        <!-- Top Home Button -->
+        <div class="top-home">
+            <a th:href="@{/accounthome}">Home</a>
+        </div>
+
+        <h2>Deposit</h2>
+
+        <p th:if="${message}"
+           th:text="${message}"
+           th:classappend="${message.contains('successful')} ? 'success' : 'error'">
+        </p>
+
+        <form method="post" th:action="@{/deposit}">
+            <label for="accountnumber">Account Number:</label>
+            <input type="text" id="accountnumber" name="accountnumber" th:value="${accno}" readonly>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" th:value="${name}" readonly>
+
+            <label for="amount">Enter Amount:</label>
+            <input type="text" id="amount" name="amount" required autocomplete="off">
+
+            <button type="submit">Proceed</button>
+        </form>
+    </div>
+</body>
+</html>

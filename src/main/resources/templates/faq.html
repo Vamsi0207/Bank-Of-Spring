@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FAQ - Bank Of Spring</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background: #f0f4f8;
+      padding: 2rem;
+    }
+
+    .wrapper {
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .bank-title {
+      font-size: 2.5rem;
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 1rem;
+      letter-spacing: 2px;
+    }
+
+    .wrapper > h1 {
+      text-align: center;
+      margin: 1rem 0 2rem 0;
+      letter-spacing: 1px;
+      color: #34495e;
+    }
+
+    .faq {
+      border: 1px solid rgba(0,0,0,0.2);
+      margin: 10px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: box-shadow 0.3s ease, border 0.3s ease;
+    }
+
+    .faq.active {
+      border: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .accordion {
+      background-color: white;
+      color: rgba(0,0,0,0.8);
+      cursor: pointer;
+      font-size: 1.2rem;
+      width: 100%;
+      padding: 1.5rem 2rem;
+      border: none;
+      outline: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: bold;
+      transition: background-color 0.4s, color 0.4s;
+    }
+
+    .accordion i {
+      font-size: 1.6rem;
+      transition: transform 0.3s ease;
+    }
+
+    .accordion.active i {
+      transform: rotate(180deg);
+    }
+
+    .accordion:hover {
+      background-color: #f1f7f5;
+    }
+
+    .panel {
+      padding: 0 2rem 1.5rem 2rem;
+      display: none;
+      background-color: #f9f9f9;
+    }
+
+    .panel p {
+      font-size: 1rem;
+      color: rgba(0,0,0,0.7);
+      line-height: 1.6;
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <h1 class="bank-title">Bank Of Spring</h1>
+    <h1>Frequently Asked Questions</h1>
+
+    <div class="faq">
+      <button class="accordion">
+        Is Bank Of Spring reliable?
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <div class="panel">
+        <p>Yes, it is reliable with more than 3 million customers.</p>
+      </div>
+    </div>
+
+    <div class="faq">
+      <button class="accordion">
+        How can I open an account?
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <div class="panel">
+        <p>You can open an account online or visit your nearest branch by providing required details.</p>
+      </div>
+    </div>
+
+    <div class="faq">
+      <button class="accordion">
+        Is internet banking secure?
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <div class="panel">
+        <p>Yes, we use top-level encryption to keep your data safe.</p>
+      </div>
+    </div>
+
+    <div class="faq">
+      <button class="accordion">
+        How to reset my password?
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <div class="panel">
+        <p>Use the "Forgot Password" option on the login page.</p>
+      </div>
+    </div>
+
+    <div class="faq">
+      <button class="accordion">
+        Does Bank Of Spring offer loans?
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <div class="panel">
+        <p>Currently we are not offering loans, but we are planning to do so in the future.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+    for (var i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        this.parentElement.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+  </script>
+</body>
+</html>

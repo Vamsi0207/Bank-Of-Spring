@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Bank Of Spring - Secure online banking, account opening, and customer support." />
+  <title>Home - Bank Of Spring</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #e0f7fa, #80deea);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    h3 {
+      margin: 20px 0 10px 0;
+      font-size: 2.5em;
+      font-weight: bold;
+      color: #004d40;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
+
+    header {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      padding: 12px 20px;
+      background: rgba(255, 255, 255, 0.8);
+      border-bottom: 1px solid #b2dfdb;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      backdrop-filter: blur(5px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav-btn, .service-dropdown {
+      padding: 10px 20px;
+      background: #ffffff;
+      border: 1px solid #b2dfdb;
+      border-radius: 30px;
+      text-decoration: none;
+      color: #006064;
+      font-weight: 500;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      transition: background 0.3s, transform 0.2s;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .nav-btn:hover, .service-dropdown:hover {
+      background: #e0f2f1;
+      transform: translateY(-2px);
+    }
+
+    .service-dropdown-content {
+      display: none;
+      position: absolute;
+      top: 110%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #ffffff;
+      min-width: 220px;
+      border: 1px solid #b2dfdb;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      z-index: 20;
+    }
+
+    .service-dropdown-content a {
+      padding: 12px 16px;
+      display: block;
+      text-decoration: none;
+      color: #004d40;
+      font-weight: 400;
+      transition: background 0.2s;
+    }
+
+    .service-dropdown-content a:hover {
+      background-color: #e0f7fa;
+    }
+
+    .service-dropdown:hover .service-dropdown-content {
+      display: block;
+    }
+
+    section {
+      margin: 40px auto;
+      text-align: center;
+      max-width: 700px;
+      color: #004d40;
+    }
+
+    .cta {
+      margin: 30px 0;
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    footer {
+      width: 100%;
+      background: #004d40;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      margin-top: auto;
+    }
+
+    footer a {
+      color: #b2dfdb;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <h3>Bank Of Spring</h3>
+
+  <header>
+    <div class="service-dropdown">
+      Services
+      <div class="service-dropdown-content">
+        <a th:href="@{/accounthome}">Net Banking</a>
+        <a th:href="@{/openAccount}">Account Opening</a>
+        <a th:href="@{/fetchdetails}">Funds Transfer</a>
+      </div>
+    </div>
+    <a th:href="@{/faqs}" class="nav-btn">FAQ</a>
+    <a th:href="@{/customer-care}" class="nav-btn">Customer Care</a>
+  </header>
+
+  <section>
+    <h2>Welcome to Bank Of Spring</h2>
+    <p>
+      Empowering your financial journey with secure and modern banking solutions.
+      Explore our services and experience hassle-free banking from the comfort of your home.
+    </p>
+  </section>
+
+  <div class="cta">
+    <a th:href="@{/openAccount}" class="nav-btn">Open an Account</a>
+    <a th:href="@{/login}" class="nav-btn">Login to Net Banking</a>
+  </div>
+
+  <section>
+    <h2>Why Choose Us?</h2>
+    <ul>
+      <li>🔒 Secure and Encrypted Transactions</li>
+      <li>💳 Easy Online Account Management</li>
+      <li>📱 Mobile Banking on the Go</li>
+      <li>👨‍💼 Customer Support</li>
+    </ul>
+  </section>
+
+  <footer>
+    © 2025 Bank Of Spring | <a th:href="@{/privacy-policy}">Privacy Policy</a>
+  </footer>
+
+</body>
+</html>

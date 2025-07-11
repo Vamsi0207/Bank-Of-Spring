@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Care - Bank Of Spring</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #c8e6c9, #81d4fa); /* greenish-blue gradient */
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      background: #fefefe; /* clean white background for card */
+      padding: 2rem 3rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      max-width: 500px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #004d40;
+      margin-bottom: 1rem;
+    }
+
+    .info-section {
+      margin-bottom: 1.2rem;
+    }
+
+    .info-section p {
+      margin: 0.3rem 0;
+      color: #006064;
+      font-size: 1.1rem;
+    }
+
+    .label {
+      font-weight: bold;
+    }
+
+    .email {
+      text-decoration: underline;
+      color: #00796b;
+      cursor: pointer;
+    }
+
+    .email:hover {
+      color: #004d40;
+    }
+
+    .address {
+      font-style: italic;
+      color: #004d40;
+      line-height: 1.4;
+    }
+
+    .note {
+      font-size: 0.95rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Customer Care</h1>
+
+    <div class="info-section">
+      <p>
+        <span class="label">Email:</span>
+        <a th:href="@{mailto:BankOfSpring@gmail.com}" class="email">BankOfSpring@gmail.com</a>
+      </p>
+      <p>
+        <span class="label">Phone 1:</span> +91 81200 00048<br>
+        <span class="note">Available: Mon-Sat 9:00 AM - 6:00 PM IST</span>
+      </p>
+      <p>
+        <span class="label">Phone 2:</span> +91 81200 00049<br>
+        <span class="note">Available: Mon-Sat 9:00 AM - 6:00 PM IST</span>
+      </p>
+    </div>
+
+    <div class="info-section">
+      <p class="label">Head Office Address:</p>
+      <p class="address">
+        Bank Of Spring Headquarters<br>
+        123 Spring Tower, Main Road<br>
+        New Finance City, India - 999999
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>
