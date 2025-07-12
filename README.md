@@ -42,7 +42,7 @@ A full-featured and secure internet banking web application built using **Spring
 
 Watch the full walkthrough of the project functionality in this demo video:
 
-➡️ [Click here to watch](https://drive.google.com/file/d/1WpQKyP6ptzLfOCa0q1Y86MqQtsrLSTOb/view?usp=drive_link)
+➡️ [Click here to watch](https://drive.google.com/file/d/1-pEI3-1qCGHEVOZCL-tvARpDZX7HJYD-/view?usp=drive_link)
 
 > The video includes:
 > - User registration and login
